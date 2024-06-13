@@ -2,14 +2,22 @@
 <html>
   <head>
     <meta charset="utf-8"/>
-    <title>Container page</title>
+    <title></title>
     <meta name="robots" content="noindex, nofollow">
-    <link rel="canonical" href="container.html"/>
+    <link rel="canonical" href="https://Shubhakar-A.github.io/container.html"/>
+    <meta name="bv:pageType" content="container">
+    <script>
+        const script = document.createElement('script');
+        const url = new URL(window.location.href);
+        const client = localStorage.getItem('bv_hosted_client');
+        const siteId = localStorage.getItem('bv_hosted_site');
+        script.src = `https://apps-qa.bazaarvoice.com/deployments/${client}/${siteId}/production/en_US/bv.js`;
+        script.async = true;
+        // Append the script to the body
+        document.head.appendChild(script);
+    </script>
   </head>
   <body>
-    <script nonce="secretkey" type="text/javascript" src="https://display-qa.ugc.bazaarvoice.com/static/bv-loader-qa/saisuresh/en_US/bvapi.js"></script>
-    <script nonce="secretkey">
-      $BV.container('global', {} );
-    </script>
+    
   </body>
 </html>

@@ -8,8 +8,8 @@
     <h1>Simple Login Page</h1>
     <form name="login" id="submitForm">
       
-      Username <input type="text" name="userid"/>
-      Password <input type="password" name="password"/>
+      Client <input type="text" name="userid"/>
+      Site <input type="text" name="password"/>
       <div style="margin-top: 10px;">
         UserToken <textarea rows="10" cols="100" type="text" name="usertoken"></textarea>
       </div>
@@ -27,23 +27,13 @@
         var bveventidIndex = url.indexOf('bveventid') + 10;
         var bveventid = url.slice(bveventidIndex, bveventidIndex + 11);
         var form = document.getElementById("submitForm");
-
+        localStorage.setItem('bv_hosted_client', form.userid.value);
+        localStorage.setItem('bv_hosted_site', form.password.value);
         event.preventDefault();
         var usertoken = form.usertoken.value;
-        if(form.userid.value == "something" && form.password.value == "something")
-        {
-          if(usertoken){
-            window.location.href = `https://saisuresh-sakthivel.github.io/saisuresh.github.io/container.html?bveventid=${bveventid}&bvuserToken=${usertoken}`
-
-          } else {
-            window.location.href = "https://saisuresh-sakthivel.github.io/saisuresh.github.io/container.html?bveventid=" + bveventid +"&bvuserToken=1a2e7906d13cdc15914e4f95ab3242a3646174653d3230323030313039267573657269643d766465726b266d61786167653d3930s"
-
+        if(usertoken){
+            window.location.href = `https://Shubhakar-A.github.io/container.html?bveventid=${bveventid}&bvuserToken=${usertoken}`
           }
-        }
-        else
-        {
-          alert("Error");
-        }
       }
     </script>
   </body>
